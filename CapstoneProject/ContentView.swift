@@ -33,17 +33,23 @@ struct ContentView: View {
             .padding()
             Spacer()
             List {
-                    ForEach (toDos) { ItemNeeded in
-                            Text(ItemNeeded.title)
+                ForEach(toDos) { toDoItem in
+                    if toDoItem.isImportant {
+                        Text("‼️ " + toDoItem.title)
+                            .fontWeight(.bold)
+                    } else {
+                        Text(toDoItem.title)
                     }
+                }
             }
+            .listStyle(.plain)
         }
         if showNewItem {
-            NewItineraryView()
-        }
-    }
+            NewItineraryView(toDoItem: ItemNeeded(title: "", isImportant: false), showNewTask: $showNewItem)
+        }    }
 }
 
 #Preview {
     ContentView()
+        .modelContainer(for: ItemNeeded.self, inMemory: true)
 }
