@@ -8,14 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var showNewItem = false
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            HStack {
+                Text("Itinerary:")
+                    .font(.system(size: 40))
+                    .fontWeight(.black)
+                Spacer()
+                Button {
+                    withAnimation {
+                        showNewItem = true
+                    }
+                } label: {
+                    Text("+")
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
+            }
+            .padding()
+            Spacer()
         }
-        .padding()
+        if showNewItem {
+            NewItineraryView()
+        }
     }
 }
 
