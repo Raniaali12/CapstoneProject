@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		BD3915B72E37ED7F00ACDD70 /* NewItineraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3915B62E37ED7F00ACDD70 /* NewItineraryView.swift */; };
+		BD3915B92E37F99B00ACDD70 /* ItemNeeded.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3915B82E37F99B00ACDD70 /* ItemNeeded.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BD3915B62E37ED7F00ACDD70 /* NewItineraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItineraryView.swift; sourceTree = "<group>"; };
+		BD3915B82E37F99B00ACDD70 /* ItemNeeded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNeeded.swift; sourceTree = "<group>"; };
 		BD5B7C502E37E89700E4A416 /* CapstoneProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapstoneProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -37,6 +39,7 @@
 		BD5B7C472E37E89700E4A416 = {
 			isa = PBXGroup;
 			children = (
+				BD3915B82E37F99B00ACDD70 /* ItemNeeded.swift */,
 				BD3915B62E37ED7F00ACDD70 /* NewItineraryView.swift */,
 				BD5B7C522E37E89700E4A416 /* CapstoneProject */,
 				BD5B7C512E37E89700E4A416 /* Products */,
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD3915B72E37ED7F00ACDD70 /* NewItineraryView.swift in Sources */,
+				BD3915B92E37F99B00ACDD70 /* ItemNeeded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

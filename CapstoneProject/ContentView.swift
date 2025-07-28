@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
     
     @State private var showNewItem = false
+    @Query var toDos: [ItemNeeded]
     
     var body: some View {
         VStack {
@@ -30,6 +32,11 @@ struct ContentView: View {
             }
             .padding()
             Spacer()
+            List {
+                    ForEach (toDos) { ItemNeeded in
+                            Text(ItemNeeded.title)
+                    }
+            }
         }
         if showNewItem {
             NewItineraryView()
